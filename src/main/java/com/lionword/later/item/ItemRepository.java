@@ -1,4 +1,4 @@
-package com.lionword.item;
+package com.lionword.later.item;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

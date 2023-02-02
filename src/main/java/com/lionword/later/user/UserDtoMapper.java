@@ -1,9 +1,10 @@
-package com.lionword.user;
+package com.lionword.later.user;
 
 import java.time.format.DateTimeFormatter;
 
 public class UserDtoMapper {
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd|hh:mm:ss");
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd|hh:mm:ss");
+
     static UserDto mapUserToDto(User user) {
         return UserDto.builder()
                 .email(user.getEmail())

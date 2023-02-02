@@ -1,4 +1,4 @@
-package com.lionword.user;
+package com.lionword.later.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Isolation;
@@ -18,6 +18,7 @@ public class UserController {
     public List<UserDto> getAllUsers() {
         return userService.getAllUsers();
     }
+
     @Transactional
     @PostMapping
     public UserDto saveNewUser(@RequestBody User user) {

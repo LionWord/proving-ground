@@ -1,4 +1,4 @@
-package com.lionword.item;
+package com.lionword.later.item;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Isolation;
@@ -11,6 +11,7 @@ import java.util.List;
 @RequestMapping("/items")
 @RequiredArgsConstructor
 public class ItemController {
+
     private final ItemService itemService;
 
     @Transactional(isolation = Isolation.READ_COMMITTED, readOnly = true)
@@ -22,7 +23,7 @@ public class ItemController {
     @Transactional
     @PostMapping
     public ItemDto add(@RequestHeader("X-Later-User-Id") Long userId,
-                    @RequestBody Item item) {
+                       @RequestBody Item item) {
         return itemService.addNewItem(userId, item);
     }
 

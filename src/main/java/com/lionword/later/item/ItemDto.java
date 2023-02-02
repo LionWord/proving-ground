@@ -1,4 +1,4 @@
-package com.lionword.item;
+package com.lionword.later.item;
 
 import lombok.AccessLevel;
 import lombok.Builder;
