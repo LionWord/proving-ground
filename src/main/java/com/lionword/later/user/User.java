@@ -35,10 +35,5 @@ public class User {
 
     @Column(name = "registration_date")
     private Instant registrationDate = Instant.now();
-    @Enumerated(EnumType.STRING)
-    private UserState state;
 
-    public enum UserState {
-        ACTIVE, BLOCKED, DELETED
-    }
 }
